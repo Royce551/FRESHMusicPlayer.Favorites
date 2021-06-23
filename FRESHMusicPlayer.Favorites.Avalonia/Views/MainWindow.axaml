@@ -1,0 +1,48 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:FRESHMusicPlayer.Favorites.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FRESHMusicPlayer.Favorites.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="FRESHMusicPlayer Favorites">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<DockPanel>
+		<DockPanel DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" LastChildFill="False" Margin="10,5">
+			<TextBlock DockPanel.Dock="Left" Text="{Binding TotalEntries}" VerticalAlignment="Center"/>
+			<Button DockPanel.Dock="Right" Content="Update" Command="{Binding UpdateCommand}"/>
+		</DockPanel>
+		<TabControl>
+			<TabItem Header="History">
+				<ListBox Items="{Binding HistoryItems}">
+					
+				</ListBox>
+			</TabItem>
+			<TabItem Header="Favorite Artists">
+				<ListBox Items="{Binding ArtistItems}">
+					
+				</ListBox>
+			</TabItem>
+			<TabItem Header="Favorite Albums">
+				<ListBox Items="{Binding AlbumItems}">
+					
+				</ListBox>
+			</TabItem>
+			<TabItem Header="Favorite Tracks">
+				<ListBox Items="{Binding TrackItems}">
+					
+				</ListBox>
+			</TabItem>
+			<TabItem Header="Options">
+				<StackPanel>
+					<Button Content="Nuke Playtime Logging File" Command="{Binding NukeFileCommand}"/>
+				</StackPanel>
+			</TabItem>
+		</TabControl>
+	</DockPanel>
+</Window>

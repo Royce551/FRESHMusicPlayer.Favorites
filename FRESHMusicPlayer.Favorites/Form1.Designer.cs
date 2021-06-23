@@ -29,6 +29,7 @@ namespace FRESHMusicPlayer.Favorites
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.historyListBox = new System.Windows.Forms.ListBox();
@@ -39,16 +40,24 @@ namespace FRESHMusicPlayer.Favorites
             this.favoriteAlbumsListBox = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.favoriteTracksListBox = new System.Windows.Forms.ListBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.formsPlot1 = new ScottPlot.FormsPlot();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.infoLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -59,12 +68,13 @@ namespace FRESHMusicPlayer.Favorites
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 416);
+            this.tabControl1.Size = new System.Drawing.Size(800, 406);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -73,7 +83,7 @@ namespace FRESHMusicPlayer.Favorites
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 388);
+            this.tabPage1.Size = new System.Drawing.Size(792, 378);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "History";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -85,7 +95,7 @@ namespace FRESHMusicPlayer.Favorites
             this.historyListBox.ItemHeight = 15;
             this.historyListBox.Location = new System.Drawing.Point(3, 3);
             this.historyListBox.Name = "historyListBox";
-            this.historyListBox.Size = new System.Drawing.Size(786, 382);
+            this.historyListBox.Size = new System.Drawing.Size(786, 372);
             this.historyListBox.TabIndex = 0;
             // 
             // tabPage2
@@ -157,6 +167,67 @@ namespace FRESHMusicPlayer.Favorites
             this.favoriteTracksListBox.Size = new System.Drawing.Size(792, 388);
             this.favoriteTracksListBox.TabIndex = 0;
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.formsPlot1);
+            this.tabPage6.Controls.Add(this.panel3);
+            this.tabPage6.Location = new System.Drawing.Point(4, 24);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(792, 388);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Charts";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // formsPlot1
+            // 
+            this.formsPlot1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.formsPlot1.Location = new System.Drawing.Point(0, 0);
+            this.formsPlot1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.formsPlot1.Name = "formsPlot1";
+            this.formsPlot1.Size = new System.Drawing.Size(792, 354);
+            this.formsPlot1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 354);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(792, 34);
+            this.panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, -23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(680, 8);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button4.Location = new System.Drawing.Point(1310, -27);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Update";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.button2);
@@ -167,12 +238,22 @@ namespace FRESHMusicPlayer.Favorites
             this.tabPage5.Text = "Options";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(8, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(178, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Nuke Tracking File";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.infoLabel);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 416);
+            this.panel2.Location = new System.Drawing.Point(0, 406);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 34);
             this.panel2.TabIndex = 1;
@@ -198,21 +279,11 @@ namespace FRESHMusicPlayer.Favorites
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(8, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Nuke Tracking File";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 440);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
             this.Name = "Form1";
@@ -222,6 +293,9 @@ namespace FRESHMusicPlayer.Favorites
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -246,6 +320,12 @@ namespace FRESHMusicPlayer.Favorites
         private System.Windows.Forms.ListBox favoriteAlbumsListBox;
         private System.Windows.Forms.ListBox favoriteTracksListBox;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TabPage tabPage6;
+        private ScottPlot.FormsPlot formsPlot1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
     }
 }
 

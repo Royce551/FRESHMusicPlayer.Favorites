@@ -25,6 +25,7 @@ namespace FRESHMusicPlayer.Favorites
             InitFavoriteArtistsBox();
             InitFavoriteAlbumsBox();
             InitFavoriteTracksBox();
+            button3_Click(null, EventArgs.Empty);
             infoLabel.Text = $"{File.Entries.Count} entries";
         }
         public void InitHistoryBox()
@@ -102,6 +103,25 @@ namespace FRESHMusicPlayer.Favorites
             var path = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FRESHMusicPlayer", "Tracking", "tracking.json");
             if (System.IO.File.Exists(path))
                 System.IO.File.Delete(path);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var xAxis = new List<double>();
+            var yAxis = new List<double>();
+            for (int i = -50; i <= -1; i++)
+            {
+                int entriesForDay = 1;
+                var day = DateTime.Now.AddDays(i);
+                foreach (var entry in File.Entries)
+                {
+                    if (entry.DatePlayed.Day == day.Day) entriesForDay++;
+                }
+                yAxis.Add(entriesForDay);
+                xAxis.Add(i);
+            }
+            formsPlot1.plt.PlotScatter(xAxis.ToArray(), yAxis.ToArray(), label: "amount of FMP listened to over time");
+            formsPlot1.Render();
         }
     }
     public enum ListType
